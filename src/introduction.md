@@ -5,6 +5,8 @@
 > [!CAUTION]
 > 筆者は Linux の専門家ではないので誤りを含む可能性があります。
 
+> [!WARNING]
+> まだまだ書きかけです。
 
 > [!NOTE]  
 > I'm planning to translate the book using [mdbook-i18n-helpers](https://github.com/google/mdbook-i18n-helpers) in the future.
