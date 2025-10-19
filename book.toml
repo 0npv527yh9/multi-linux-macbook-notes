@@ -3,3 +3,12 @@ authors = ["Junya Hirashima"]
 language = "ja"
 src = "src"
 title = "Installing Multiple Linux Distros on an Old MacBook"
+
+[preprocessor.alerts]
+
+[preprocessor.last-changed]
+command = "mdbook-last-changed"
+renderer = ["html"]
+
+[output.html]
+git-repository-url = "https://github.com/0npv527yh9/multi-linux-macbook-notes"

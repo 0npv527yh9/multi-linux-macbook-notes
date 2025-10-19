@@ -20,6 +20,10 @@ jobs:
         with:
           mdbook-version: 'latest'
 
+      - name: Install mdBook plugins
+        run: |
+          cargo install mdbook-last-changed mdbook-alerts
+
       - name: Build
         run: mdbook build
 
