@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Linux Mint - Installing Multiple Linux Distros on an Old MacBook</title>
+        <title>Install Zorin OS - Installing Multiple Linux Distros on an Old MacBook</title>
 
 
         <!-- Custom HTML head -->
@@ -245,18 +245,32 @@
 }
 
 </style>
+<h1 id="install-zorin-os-18"><a class="header" href="#install-zorin-os-18">Install Zorin OS 18</a></h1>
+<h2 id="download"><a class="header" href="#download">Download</a></h2>
+<p><a href="https://zorin.com/os/mirrors/">https://zorin.com/os/mirrors/</a> にアクセスしてお住まいの地域に近い mirror server を選択します。</p>
+<p>遷移先のページでインストールしたい OS のバージョンを選択します。
+ここでは <code>Zorin-OS-18-Core-64-bit.iso</code> をダウンロードしました。</p>
+<h3 id="check-sha-256-hash"><a class="header" href="#check-sha-256-hash">Check SHA-256 hash</a></h3>
+<p><a href="https://help.zorin.com/docs/getting-started/check-the-integrity-of-your-copy-of-zorin-os/#correct-sha256-checksums">https://help.zorin.com/docs/getting-started/check-the-integrity-of-your-copy-of-zorin-os/#correct-sha256-checksums</a> にアクセスして、ISO Image の SHA256 の期待値を確認します。</p>
+<p>Zorin OS 18 Core の場合は:</p>
+<blockquote>
+<p>98666287ca5afae215def4804aca479bf3b439e028bc8f4e4d8ecddb6dd27339</p>
+</blockquote>
+<p>次にターミナルから実際にダウンロードした ISO ファイルの checksum を確認します。</p>
+<pre><code class="language-bash">$ sha256sum Zorin-OS-18-Core-64-bit.iso 
+98666287ca5afae215def4804aca479bf3b439e028bc8f4e4d8ecddb6dd27339  Zorin-OS-18-Core-64-bit.iso
+</code></pre>
+<p>一致しているので問題ないです。</p>
+<h2 id="create-a-live-usb"><a class="header" href="#create-a-live-usb">Create a Live USB</a></h2>
 <footer id="last-change">Last change: <time datetime="2025-10-19">2025-10-19</time>, commit: <a href="https://github.com/0npv527yh9/multi-linux-macbook-notes/commit/6c91eb4">6c91eb4</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../common-knowledge/install-os.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../zorin/summary.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../zorin/summary.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -264,13 +278,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../common-knowledge/install-os.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../zorin/summary.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../zorin/summary.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
             </nav>
 
         </div>
