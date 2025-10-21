@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Common Knowledge - Installing Multiple Linux Distros on an Old MacBook</title>
+        <title>Download ISO Image - Installing Multiple Linux Distros on an Old MacBook</title>
 
 
         <!-- Custom HTML head -->
@@ -245,17 +245,55 @@
 }
 
 </style>
-<h1 id="common-knowledge"><a class="header" href="#common-knowledge">Common Knowledge</a></h1>
-<footer id="last-change">Last change: <time datetime="2025-10-19">2025-10-19</time>, commit: <a href="https://github.com/0npv527yh9/multi-linux-macbook-notes/commit/6c91eb4">6c91eb4</a></footer>
+<h1 id="download-iso-image"><a class="header" href="#download-iso-image">Download ISO Image</a></h1>
+<h2 id="必要なもの"><a class="header" href="#必要なもの">必要なもの</a></h2>
+<ul>
+<li>インターネットに接続している PC (Linux をインストールする PC と同一でも可)</li>
+<li>ISO イメージを保存するストレージ</li>
+</ul>
+<h2 id="手順"><a class="header" href="#手順">手順</a></h2>
+<ol>
+<li>インストールしたい Linux distro の公式サイトにアクセスします</li>
+<li>バージョンやエディション (例: Linux Mint の Cinnamon, Xfce, MATE) を決める</li>
+<li>ISO イメージをダウンロード</li>
+</ol>
+<h2 id="iso-イメージをダウンロード"><a class="header" href="#iso-イメージをダウンロード">ISO イメージをダウンロード</a></h2>
+<h3 id="ミラーサーバー"><a class="header" href="#ミラーサーバー">ミラーサーバー</a></h3>
+<p>ISO イメージをダウンロードするにあたって、ミラーサーバーを利用するのがよいです。</p>
+<p>ミラーサーバーとは、あるサーバーのデータが複製されたサーバーです。ミラーサーバーを地理的に分散して配置しておくことで世界中からのアクセスを分散させることができます。利用者としても、自分に地理的に近いミラーサーバーを使うとダウンロードにかかる時間が最小になるためメリットがあります。</p>
+<p>たとえば Linux Mint の ISO イメージダウンロードページでは、ミラーサーバーを選択する画面が出ていてわかりやすいです:
+<a href="https://linuxmint.com/edition.php?id=322">https://linuxmint.com/edition.php?id=322</a></p>
+<p>自分で明示的に選択しないとデフォルトのサーバーからのダウンロードが始まるケースもあるので注意が必要です。</p>
+<h3 id="ダウンロード"><a class="header" href="#ダウンロード">ダウンロード</a></h3>
+<p><code>xxx.iso</code> というファイルをダウンロードします。</p>
+<div class="mdbook-alerts mdbook-alerts-note">
+<p class="mdbook-alerts-title">
+  <span class="mdbook-alerts-icon"></span>
+  note
+</p>
+<p><code>xxx.iso.torrent</code> という形式のファイルも公開されていることがあります。筆者はあまり詳しくありませんが、P2P 通信を利用した分散型のダウンロードを行うようです。P2P 通信はそれ自体が危険というわけではないですが注意が必要のため、よくわからない場合はあえて選ぶ必要はなさそうです。</p>
+</div>
+<h3 id="ハッシュ値の確認"><a class="header" href="#ハッシュ値の確認">ハッシュ値の確認</a></h3>
+<p>大きなファイルをミラーサイトを経由してダウンロードするため、ファイルの破損やデータの改ざんが起きていないかチェックするのが安全です。
+ほとんどの場合、ISO イメージと一緒に SHA256 のハッシュ値が公開されています。</p>
+<p>たとえば、Linux Mint 22 の各エディションの ISO イメージの SHA256 の値は <a href="https://mirrors.edge.kernel.org/linuxmint/stable/22.2/sha256sum.txt">https://mirrors.edge.kernel.org/linuxmint/stable/22.2/sha256sum.txt</a> で公開されています。</p>
+<p>この値と、ダウンロードしたファイルのハッシュ値が一致するか確認します。SHA256 の場合、以下のコマンドで確認できます:</p>
+<pre><code class="language-bash"># Linux / Mac
+$ sha256sum xxx.iso
+
+# Windows
+$ certutil -hashfile xxx.iso SHA256
+</code></pre>
+<footer id="last-change">Last change: <time datetime="2025-10-22">2025-10-22</time>, commit: <a href="https://github.com/0npv527yh9/multi-linux-macbook-notes/commit/fb266fe">fb266fe</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../installation-steps/summary.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../common-knowledge/install-os.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../linux-mint/summary.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -265,11 +303,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../installation-steps/summary.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../common-knowledge/install-os.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../linux-mint/summary.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Install OS - Installing Multiple Linux Distros on an Old MacBook</title>
+        <title>Installation Steps - Installing Multiple Linux Distros on an Old MacBook</title>
 
 
         <!-- Custom HTML head -->
@@ -245,25 +245,32 @@
 }
 
 </style>
-<h1 id="install-os"><a class="header" href="#install-os">Install OS</a></h1>
-<h2 id="download-iso-image"><a class="header" href="#download-iso-image">Download ISO Image</a></h2>
-<h3 id="check-checksums"><a class="header" href="#check-checksums">Check checksums</a></h3>
-<p>大きなファイルをミラーサイトを経由してダウンロードするため、ファイルの破損やデータの改ざんが起きていないかチェックするのが安全です。</p>
-<p>ほとんどの場合、ISO Image の SHA256 のハッシュ値が公開されています。
-ダウンロードしたファイルのハッシュ値を計算することで正常にダウンロードできていることを確認します。</p>
-<pre><code>$ sha256sum
-</code></pre>
-<h2 id="create-a-live-usb"><a class="header" href="#create-a-live-usb">Create a Live USB</a></h2>
-<footer id="last-change">Last change: <time datetime="2025-10-19">2025-10-19</time>, commit: <a href="https://github.com/0npv527yh9/multi-linux-macbook-notes/commit/6c91eb4">6c91eb4</a></footer>
+<h1 id="installation-steps"><a class="header" href="#installation-steps">Installation Steps</a></h1>
+<p>Linux distro のインストールは以下の手順で行います。</p>
+<ol>
+<li>インストールする Linux ディストーションの ISO イメージをダウンロード</li>
+<li>Live USB 作成</li>
+<li>Live USB 上での起動</li>
+<li>インストール</li>
+<li>インストール後のセットアップ</li>
+</ol>
+<p>どの Linux distro をインストールする場合もほとんど手順は同じなので先にまとめておきます。</p>
+<h2 id="必要なもの"><a class="header" href="#必要なもの">必要なもの</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>項目</th><th>備考</th></tr></thead><tbody>
+<tr><td>インターネットに接続している PC</td><td>Linux をインストールする PC と同一でも可</td></tr>
+<tr><td>ISO イメージを保存するストレージ</td><td>Linux をインストールするストレージと同一でも可</td></tr>
+<tr><td>Live USB 用の USB メモリ</td><td>既存のデータは完全に消えるので不要なものや新品のもの</td></tr>
+</tbody></table>
+</div><footer id="last-change">Last change: <time datetime="2025-10-22">2025-10-22</time>, commit: <a href="https://github.com/0npv527yh9/multi-linux-macbook-notes/commit/fb266fe">fb266fe</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../common-knowledge/summary.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../linux-mint/summary.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../installation-steps/download-iso-image.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -273,11 +280,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../common-knowledge/summary.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../linux-mint/summary.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../installation-steps/download-iso-image.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

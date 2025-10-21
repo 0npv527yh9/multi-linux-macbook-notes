@@ -269,7 +269,7 @@
 </p>
 <p>I'm planning to translate the book using <a href="https://github.com/google/mdbook-i18n-helpers">mdbook-i18n-helpers</a> in the future.</p>
 </div>
-<footer id="last-change">Last change: <time datetime="2025-10-19">2025-10-19</time>, commit: <a href="https://github.com/0npv527yh9/multi-linux-macbook-notes/commit/6c91eb4">6c91eb4</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
+<footer id="last-change">Last change: <time datetime="2025-10-22">2025-10-22</time>, commit: <a href="https://github.com/0npv527yh9/multi-linux-macbook-notes/commit/fb266fe">fb266fe</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
 .mdbook-alerts {
   padding: 8px 16px;
   margin-bottom: 16px;
@@ -336,8 +336,23 @@
 }
 
 </style>
-<h1 id="common-knowledge"><a class="header" href="#common-knowledge">Common Knowledge</a></h1>
-<footer id="last-change">Last change: <time datetime="2025-10-19">2025-10-19</time>, commit: <a href="https://github.com/0npv527yh9/multi-linux-macbook-notes/commit/6c91eb4">6c91eb4</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
+<h1 id="installation-steps"><a class="header" href="#installation-steps">Installation Steps</a></h1>
+<p>Linux distro のインストールは以下の手順で行います。</p>
+<ol>
+<li>インストールする Linux ディストーションの ISO イメージをダウンロード</li>
+<li>Live USB 作成</li>
+<li>Live USB 上での起動</li>
+<li>インストール</li>
+<li>インストール後のセットアップ</li>
+</ol>
+<p>どの Linux distro をインストールする場合もほとんど手順は同じなので先にまとめておきます。</p>
+<h2 id="必要なもの"><a class="header" href="#必要なもの">必要なもの</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>項目</th><th>備考</th></tr></thead><tbody>
+<tr><td>インターネットに接続している PC</td><td>Linux をインストールする PC と同一でも可</td></tr>
+<tr><td>ISO イメージを保存するストレージ</td><td>Linux をインストールするストレージと同一でも可</td></tr>
+<tr><td>Live USB 用の USB メモリ</td><td>既存のデータは完全に消えるので不要なものや新品のもの</td></tr>
+</tbody></table>
+</div><footer id="last-change">Last change: <time datetime="2025-10-22">2025-10-22</time>, commit: <a href="https://github.com/0npv527yh9/multi-linux-macbook-notes/commit/fb266fe">fb266fe</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
 .mdbook-alerts {
   padding: 8px 16px;
   margin-bottom: 16px;
@@ -404,16 +419,46 @@
 }
 
 </style>
-<h1 id="install-os"><a class="header" href="#install-os">Install OS</a></h1>
-<h2 id="download-iso-image"><a class="header" href="#download-iso-image">Download ISO Image</a></h2>
-<h3 id="check-checksums"><a class="header" href="#check-checksums">Check checksums</a></h3>
-<p>大きなファイルをミラーサイトを経由してダウンロードするため、ファイルの破損やデータの改ざんが起きていないかチェックするのが安全です。</p>
-<p>ほとんどの場合、ISO Image の SHA256 のハッシュ値が公開されています。
-ダウンロードしたファイルのハッシュ値を計算することで正常にダウンロードできていることを確認します。</p>
-<pre><code>$ sha256sum
+<h1 id="download-iso-image"><a class="header" href="#download-iso-image">Download ISO Image</a></h1>
+<h2 id="必要なもの-1"><a class="header" href="#必要なもの-1">必要なもの</a></h2>
+<ul>
+<li>インターネットに接続している PC (Linux をインストールする PC と同一でも可)</li>
+<li>ISO イメージを保存するストレージ</li>
+</ul>
+<h2 id="手順"><a class="header" href="#手順">手順</a></h2>
+<ol>
+<li>インストールしたい Linux distro の公式サイトにアクセスします</li>
+<li>バージョンやエディション (例: Linux Mint の Cinnamon, Xfce, MATE) を決める</li>
+<li>ISO イメージをダウンロード</li>
+</ol>
+<h2 id="iso-イメージをダウンロード"><a class="header" href="#iso-イメージをダウンロード">ISO イメージをダウンロード</a></h2>
+<h3 id="ミラーサーバー"><a class="header" href="#ミラーサーバー">ミラーサーバー</a></h3>
+<p>ISO イメージをダウンロードするにあたって、ミラーサーバーを利用するのがよいです。</p>
+<p>ミラーサーバーとは、あるサーバーのデータが複製されたサーバーです。ミラーサーバーを地理的に分散して配置しておくことで世界中からのアクセスを分散させることができます。利用者としても、自分に地理的に近いミラーサーバーを使うとダウンロードにかかる時間が最小になるためメリットがあります。</p>
+<p>たとえば Linux Mint の ISO イメージダウンロードページでは、ミラーサーバーを選択する画面が出ていてわかりやすいです:
+<a href="https://linuxmint.com/edition.php?id=322">https://linuxmint.com/edition.php?id=322</a></p>
+<p>自分で明示的に選択しないとデフォルトのサーバーからのダウンロードが始まるケースもあるので注意が必要です。</p>
+<h3 id="ダウンロード"><a class="header" href="#ダウンロード">ダウンロード</a></h3>
+<p><code>xxx.iso</code> というファイルをダウンロードします。</p>
+<div class="mdbook-alerts mdbook-alerts-note">
+<p class="mdbook-alerts-title">
+  <span class="mdbook-alerts-icon"></span>
+  note
+</p>
+<p><code>xxx.iso.torrent</code> という形式のファイルも公開されていることがあります。筆者はあまり詳しくありませんが、P2P 通信を利用した分散型のダウンロードを行うようです。P2P 通信はそれ自体が危険というわけではないですが注意が必要のため、よくわからない場合はあえて選ぶ必要はなさそうです。</p>
+</div>
+<h3 id="ハッシュ値の確認"><a class="header" href="#ハッシュ値の確認">ハッシュ値の確認</a></h3>
+<p>大きなファイルをミラーサイトを経由してダウンロードするため、ファイルの破損やデータの改ざんが起きていないかチェックするのが安全です。
+ほとんどの場合、ISO イメージと一緒に SHA256 のハッシュ値が公開されています。</p>
+<p>たとえば、Linux Mint 22 の各エディションの ISO イメージの SHA256 の値は <a href="https://mirrors.edge.kernel.org/linuxmint/stable/22.2/sha256sum.txt">https://mirrors.edge.kernel.org/linuxmint/stable/22.2/sha256sum.txt</a> で公開されています。</p>
+<p>この値と、ダウンロードしたファイルのハッシュ値が一致するか確認します。SHA256 の場合、以下のコマンドで確認できます:</p>
+<pre><code class="language-bash"># Linux / Mac
+$ sha256sum xxx.iso
+
+# Windows
+$ certutil -hashfile xxx.iso SHA256
 </code></pre>
-<h2 id="create-a-live-usb"><a class="header" href="#create-a-live-usb">Create a Live USB</a></h2>
-<footer id="last-change">Last change: <time datetime="2025-10-19">2025-10-19</time>, commit: <a href="https://github.com/0npv527yh9/multi-linux-macbook-notes/commit/6c91eb4">6c91eb4</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
+<footer id="last-change">Last change: <time datetime="2025-10-22">2025-10-22</time>, commit: <a href="https://github.com/0npv527yh9/multi-linux-macbook-notes/commit/fb266fe">fb266fe</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
 .mdbook-alerts {
   padding: 8px 16px;
   margin-bottom: 16px;
@@ -480,7 +525,7 @@
 }
 
 </style>
-<footer id="last-change">Last change: <time datetime="2025-10-19">2025-10-19</time>, commit: <a href="https://github.com/0npv527yh9/multi-linux-macbook-notes/commit/6c91eb4">6c91eb4</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
+<footer id="last-change">Last change: <time datetime="2025-10-22">2025-10-22</time>, commit: <a href="https://github.com/0npv527yh9/multi-linux-macbook-notes/commit/fb266fe">fb266fe</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
 .mdbook-alerts {
   padding: 8px 16px;
   margin-bottom: 16px;
@@ -552,7 +597,7 @@
 <li>Website: <a href="https://zorin.com/os/download/">https://zorin.com/os/download/</a></li>
 <li>Latest Version: 18 (2025-10-14 Release)</li>
 </ul>
-<footer id="last-change">Last change: <time datetime="2025-10-19">2025-10-19</time>, commit: <a href="https://github.com/0npv527yh9/multi-linux-macbook-notes/commit/6c91eb4">6c91eb4</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
+<footer id="last-change">Last change: <time datetime="2025-10-22">2025-10-22</time>, commit: <a href="https://github.com/0npv527yh9/multi-linux-macbook-notes/commit/fb266fe">fb266fe</a></footer><div style="break-before: page; page-break-before: always;"></div><style>
 .mdbook-alerts {
   padding: 8px 16px;
   margin-bottom: 16px;
@@ -635,8 +680,8 @@
 98666287ca5afae215def4804aca479bf3b439e028bc8f4e4d8ecddb6dd27339  Zorin-OS-18-Core-64-bit.iso
 </code></pre>
 <p>一致しているので問題ないです。</p>
-<h2 id="create-a-live-usb-1"><a class="header" href="#create-a-live-usb-1">Create a Live USB</a></h2>
-<footer id="last-change">Last change: <time datetime="2025-10-19">2025-10-19</time>, commit: <a href="https://github.com/0npv527yh9/multi-linux-macbook-notes/commit/6c91eb4">6c91eb4</a></footer>
+<h2 id="create-a-live-usb"><a class="header" href="#create-a-live-usb">Create a Live USB</a></h2>
+<footer id="last-change">Last change: <time datetime="2025-10-22">2025-10-22</time>, commit: <a href="https://github.com/0npv527yh9/multi-linux-macbook-notes/commit/fb266fe">fb266fe</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
