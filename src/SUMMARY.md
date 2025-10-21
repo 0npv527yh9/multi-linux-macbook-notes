@@ -6,8 +6,8 @@
 
 # Install Linux Distributions
 
-- [Common Knowledge](common-knowledge/summary.md)
-  - [Install OS](common-knowledge/install-os.md)
+- [Installation Steps](installation-steps/summary.md)
+  - [Download ISO Image](installation-steps/download-iso-image.md)
 - [Linux Mint](linux-mint/summary.md)
 - [Zorin OS](zorin/summary.md)
   - [Install Zorin OS](zorin/install-zorin-os.md)
